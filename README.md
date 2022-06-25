@@ -16,16 +16,12 @@ To write a program to implement the SVM For Spam Mail Detection.
 
 ## Program:
 ```
-Program to implement the SVM For Spam Mail Detection..
 Developed by: Sai Darshan G
 RegisterNumber:  212221240047
 import numpy as np
 import matplotlib.pyplot as plt
 import pandas as pd
 dataset=pd.read_csv("/content/spam.csv",encoding='latin-1')
-dataset
-dataset.head()
-dataset.info()
 dataset.isnull().sum()
 X = dataset["v1"].values
 Y = dataset["v2"].values
@@ -39,10 +35,8 @@ from sklearn.svm import SVC
 svc=SVC()
 svc.fit(X_train,Y_train)
 Y_pred = svc.predict(X_test)
-Y_pred
 from sklearn import metrics
 accuracy = metrics.accuracy_score(Y_test,Y_pred)
-accuracy
 ```
 ## Output:
 ![SVM For Spam Mail Detection](1.png)
